@@ -160,8 +160,8 @@ class AlgumaLexer(Lexer):
     decisionsToDFA = [ DFA(ds, i) for i, ds in enumerate(atn.decisionToState) ]
 
     WILDCARD = 1
-    INT = 2
-    FLOAT = 3
+    NUM_INT = 2
+    NUM_REAL = 3
     IDENT = 4
     CADEIA = 5
     ESC_SEQ = 6
@@ -179,11 +179,11 @@ class AlgumaLexer(Lexer):
             "'\\\"'" ]
 
     symbolicNames = [ "<INVALID>",
-            "WILDCARD", "INT", "FLOAT", "IDENT", "CADEIA", "ESC_SEQ", "COMENTARIO", 
-            "WS", "UNCLOSED_CHAIN", "UNCLOSED_COMMENT", "GENERAL_ERROR" ]
+            "WILDCARD", "NUM_INT", "NUM_REAL", "IDENT", "CADEIA", "ESC_SEQ", 
+            "COMENTARIO", "WS", "UNCLOSED_CHAIN", "UNCLOSED_COMMENT", "GENERAL_ERROR" ]
 
-    ruleNames = [ "WILDCARD", "INT", "FLOAT", "IDENT", "CADEIA", "ESC_SEQ", 
-                  "COMENTARIO", "WS", "UNCLOSED_CHAIN", "UNCLOSED_COMMENT", 
+    ruleNames = [ "WILDCARD", "NUM_INT", "NUM_REAL", "IDENT", "CADEIA", 
+                  "ESC_SEQ", "COMENTARIO", "WS", "UNCLOSED_CHAIN", "UNCLOSED_COMMENT", 
                   "GENERAL_ERROR" ]
 
     grammarFileName = "AlgumaLexer.g4"

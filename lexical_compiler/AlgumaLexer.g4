@@ -15,9 +15,9 @@ WILDCARD :	'algoritmo' | 'declare' | ':' | 'literal' | 'inteiro' | 'leia'
 
 // Números
 // Como visto em aula, primeiro precisamos testar para inteiros, depois para real
-INT	: /*('+'|'-')?*/('0'..'9')+
+NUM_INT	: /*('+'|'-')?*/('0'..'9')+
  	;
-FLOAT : /*('+'|'-')?*/('0'..'9')+ ('.' ('0'..'9')+)?
+NUM_REAL : /*('+'|'-')?*/('0'..'9')+ ('.' ('0'..'9')+)?
  	;
 
 // Identificadores
